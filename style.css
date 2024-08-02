@@ -1,0 +1,141 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --pale-blue: hsl(225, 100%, 94%);
+    --pale-blue-var: 225, 100%, 94%;
+    --bright-blue: hsl(245, 75%, 52%);
+    --bright-blue-var: 245, 75%, 52%;
+
+    --very-pale-blue: hsl(225, 100%, 98%);
+    --very-pale-blue-var: 225, 100%, 98%;
+    --desaturated-blue: hsl(224, 23%, 55%);
+    --desaturated-blue-var: 224, 23%, 55%;
+    --dark-blue: hsl(223, 47%, 23%);
+    --dark-blue-var: 223, 47%, 23%;
+}
+
+body {
+    min-height: 100vh;
+    font-family: "Red Hat display", sans-serif;
+    background-color: var(--pale-blue);
+    background-image: url("images/pattern-background-desktop.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    display: grid;
+    place-content: center;
+}
+
+@media (max-width: 650px) {
+    body {
+        background-image: url("images/pattern-background-mobile.svg");
+    }
+
+    .order-summary > p {
+        margin-inline: -5px;
+    }
+}
+
+.card-wrapper {
+    margin-inline: 1rem;
+    background-color: white;
+    border-radius: 1rem;
+    overflow: hidden;
+    max-width: 400px;
+}
+
+.illustration > img {
+    width: 100%;
+}
+
+.order-summary {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    padding: 2rem;
+    text-align: center;
+    box-shadow: 0px 16px 16px 0px var(--pale-blue);
+}
+
+.order-summary h1 {
+    font-size: 1.65rem;
+    font-weight: 900;
+    color: var(--dark-blue);
+}
+
+.order-summary > p {
+    color: var(--desaturated-blue);
+    font-weight: 500;
+    padding-inline: 1.5rem;
+}
+
+.plan {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--very-pale-blue);
+    padding: 1.125rem;
+    border-radius: .5rem;
+}
+
+.plan a {
+    color: var(--bright-blue);
+    font-weight: 900;
+    transition: .3s;
+}
+
+.plan a:hover {
+    text-decoration: none;
+    filter: opacity(80%);
+}
+
+.plan-price {
+    display: flex;
+    gap: 1rem;
+}
+
+.annual-plan {
+    text-align: left;
+}
+
+.annual-plan h2 {
+    color: var(--dark-blue);
+    font-size: 1rem;
+    font-weight: 900;
+}
+
+.annual-plan p {
+    color: var(--desaturated-blue);
+    font-weight: 500;
+}
+
+.button {
+    background-color: var(--bright-blue);
+    color: white;
+    outline: 0;
+    border: 0;
+    border-radius: .5rem;
+    padding: 1rem;
+    font-weight: 700;
+    box-shadow: 0px 8px 16px 0px var(--pale-blue);
+    transition: .3s;
+}
+
+.button:hover {
+    filter: opacity(80%);
+}
+
+.cancle-order {
+    text-decoration: none;
+    color: var(--desaturated-blue);
+    font-weight: 900;
+    font-size: .9rem;
+    transition: .3s;
+}
+
+.cancle-order:hover {
+    color: var(--dark-blue);
+}
